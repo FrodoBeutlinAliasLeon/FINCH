@@ -1,0 +1,2 @@
+def TTS(anything):
+    pass

@@ -1,0 +1,16 @@
+langchain
+langchain-mistralai
+mistralai
+python-dotenv
+tapo
+pydantic
+pvporcupine
+pyaudio
+numpy
+webrtcvad
+requests
+openai-whisper
+flask
+flask-basicauth
+scikit-learn
+webrtcvad-wheels

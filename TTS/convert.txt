@@ -1,0 +1,21 @@
+Hmm okay, also du hast einen Vektor, einen Richtungsvektor und einen Startpunkt und willst wissen, wie du den Schnittpunkt mit einer Einheitskugel findest, ja?
+
+Also erstmal, eine Einheitskugel ist eine Kugel mit Radius 1, die im Ursprung liegt, oder? (grübeln)
+
+Okay, dann kannst du das so machen:
+
+1. Parametrisiere deine Gerade. Die Gerade geht durch den Startpunkt und hat den Richtungsvektor. Also ist die Gerade gegeben durch:
+   r(t) = Startpunkt + t * Richtungsvektor
+
+2. Die Gleichung der Einheitskugel ist:
+   x² + y² + z² = 1
+
+3. Setze die Geradengleichung in die Kugelgleichung ein. Das gibt dir eine Gleichung für t.
+
+4. Löse die Gleichung nach t auf. Wenn es Lösungen gibt, dann gibt es Schnittpunkte.
+
+5. Setze die Lösungen für t in die Geradengleichung ein, um die Schnittpunkte zu finden.
+
+Falls es keine Lösungen gibt, dann schneidet die Gerade die Kugel nicht. (hoffen, dass es klappt)
+
+Viel Erfolg! (daumen drücken)
