@@ -218,7 +218,7 @@ __marimo__/
 #SSL
 /SSL/
 #State
-/State/
+/State/state.json
 #AudioFiles
 /AudioFiles/output.wav
 /AudioFiles/audio.mp3
