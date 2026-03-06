@@ -21,7 +21,6 @@ load_dotenv()
 WAKEWORD_MODEL_PATH = Path(__file__).parent /'PPN' /'JARVIS-RASPBERRYPI.ppn'
 MODEL_PATH = Path(__file__).parent /'PPN' /'porcupine_params_de.pv'
 INPUT_DEVICE_INDEX = 5
-OUTPUT_DEVICE_INDEX = 2
 ACCESS_KEY = os.getenv("PORCUPINE")
 OUT_FILE = str(Path(__file__).parent /'AudioFiles' / 'output.wav')
 
@@ -132,7 +131,7 @@ def record_text(pa, input_device_index: int):
         print("LLM ACTIVATED")
         answer = read_user(spoken_text)
         TTS(answer)
-        subprocess.run(["aplay", "-D", f"plughw:{OUTPUT_DEVICE_INDEX},0", f"{OUT_FILE}"])
+        subprocess.run(["paplay",f"{OUT_FILE}"])
         
     
     
