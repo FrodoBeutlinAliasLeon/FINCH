@@ -15,5 +15,36 @@ For privacy reasons i decided to mainly use the european AI-company "Mistral".
 4. The last and final step is to transcribe response text from the agent back to speecht by using a STT model.
 <p align="center">
 <img src="/assets/FINCH-workflow.png"/></p>
+
+## Project Structure
+
+```
+FINCH/
+├── backbone.py              # Main loop: wake word → record → classify → act
+├── actions.py               # Flask REST API (light control, disco, temp endpoint)
+├── AIAgent/
+│   ├── agents.py            # LangChain agent with Mistral LLM
+│   └── agent_tools.py       # Tool definitions for the agent
+├── Classification/
+│   ├── classifier.py        # TF-IDF + SVM intent classifier
+│   └── intent_model.pkl     # Trained classifier model
+├── STT/
+│   └── voxtral.py           # Speech-to-text via Mistral Voxtral
+├── TTS/
+│   └── piper_tts.py         # Text-to-speech output
+├── TapoTools/
+│   └── lamps.py             # Tapo smart light/strip control
+├── State/
+│   ├── world_state.py       # Pydantic world state (JSON persistence)
+│   └── state.json           # Runtime state file (needs to be added manually)
+├── PPN/
+│   ├── JARVIS-RASPBERRYPI.ppn  # Wake word model
+│   └── porcupine_params_de.pv  # German language model
+├── SSL/
+│   ├── cert.pem             # HTTPS certificate (needs to be added manually)
+│   └── key.pem              # HTTPS private key (needs to be added manually)
+└── AudioFiles/
+    └── output.wav           # Temporary recording buffer
+```
 <p align="right">
 <img src ="/assets/fink.png" width=150></p>
