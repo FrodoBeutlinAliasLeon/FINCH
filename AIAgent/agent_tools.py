@@ -11,6 +11,7 @@ from TapoTools.lamps import (light_on,
                              light_strip_on,
                              light_strip_off,
                              change_color_light_strip)
+from State.world_state import get_state
 load_dotenv()
 client = ApiClient(tapo_username=os.getenv("TAPO_USER"), tapo_password=os.getenv("TAPO_PW"))
 
@@ -68,6 +69,15 @@ def end_kodi():
 def change_volume(volume: int):
     "This tool changes the volume."
     subprocess.Popen(["amixer", "set", "PCM", f"{volume}%"])
+
+@tool 
+def get_room_temp_humidty():
+    "Returns the current Temperature and Humidity IN the room."
+    state = get_state()
+    temperature = state.room.temp
+    humidity = state.room.humidity
+    return temperature,humidity
+    
     
     
     
@@ -80,4 +90,6 @@ tools = [light_on_agent,
          light_strip_off_agent,
          change_color_light_strip,
          start_kodi,
-         end_kodi,]
+         end_kodi,
+         get_room_temp_humidty,
+         change_volume]
