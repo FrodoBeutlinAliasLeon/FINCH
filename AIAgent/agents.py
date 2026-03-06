@@ -43,6 +43,7 @@ Falls verlangt hast du zugang zu folgenden Tools:
 - change_color_light_strip_agent: change the color of the LED strip behind the bed
 - start_kodi: use this to start the Kodi-App. Kodi is a private Netflix alternativ
 - end_kodi: use this to end the Kodi-App. Kodi is a private Netflix alternativ
+- get_room_temp_humidty: use this tool to get information about the current temperature and relativ humidity inside the room.
 """        
 
 llm = ChatMistralAI(
