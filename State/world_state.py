@@ -1,4 +1,3 @@
-import json
 from pydantic import BaseModel #here i can create lists to choose from, for attributes, device etc so no mistakes will happen
 from pathlib import Path
 
